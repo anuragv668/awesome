@@ -330,6 +330,10 @@ globalkeys = gears.table.join(
 
     -- my configurations start
 
+    awful.key({ }, "Print", function () awful.spawn("scrot -e 'mv $f ~/Pictures/screenshots/ 2>/dev/null'", false) end,
+              {description = "Take a screenshot", group = "screenshot"}),
+
+
     awful.key({ modkey },            "r",     function () awful.spawn.with_shell("rofi -show drun &") end,
               {description = "application launcher", group = "rofi"}),
 
