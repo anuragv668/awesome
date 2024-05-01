@@ -633,6 +633,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 --setting wallpaper
 awful.spawn.with_shell('nitrogen --restore &')
+--awful.spawn.with_shell("nitrogen --set-zoom --random &")
 
 -- Autostart Applications
 awful.spawn.with_shell("picom -b &") -- Add this line for Picom
