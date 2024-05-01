@@ -333,7 +333,7 @@ globalkeys = gears.table.join(
     awful.key({ }, "Print", function () awful.spawn("scrot -e 'mv $f ~/Pictures/screenshots/ 2>/dev/null'", false) end,
               {description = "Take a screenshot", group = "screenshot"}),
 
-    awful.key({ modkey },            "c",     function () awful.spawn.with_shell("nitrogen --set-zoom --random &") end,
+    awful.key({ modkey },            "c",     function () awful.spawn.with_shell("nitrogen --set-zoom --random --save &") end,
               {description = "change wallpaper", group = "wallpaper nitrogen"}),
 
 
