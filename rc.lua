@@ -333,6 +333,9 @@ globalkeys = gears.table.join(
     awful.key({ }, "Print", function () awful.spawn("scrot -e 'mv $f ~/Pictures/screenshots/ 2>/dev/null'", false) end,
               {description = "Take a screenshot", group = "screenshot"}),
 
+    awful.key({ modkey },            "c",     function () awful.spawn.with_shell("nitrogen --set-zoom --random &") end,
+              {description = "change wallpaper", group = "wallpaper nitrogen"}),
+
 
     awful.key({ modkey },            "r",     function () awful.spawn.with_shell("rofi -show drun &") end,
               {description = "application launcher", group = "rofi"}),
@@ -633,7 +636,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 --setting wallpaper
 awful.spawn.with_shell('nitrogen --restore &')
---awful.spawn.with_shell("nitrogen --set-zoom --random &")
 
 -- Autostart Applications
 awful.spawn.with_shell("picom -b &") -- Add this line for Picom
