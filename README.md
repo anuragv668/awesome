@@ -1,4 +1,4 @@
-# my AwesomeWM Config
+# My AwesomeWM Config
 
 ![](https://awesomewm.org/images/awesome-dark-1.svg)
 
